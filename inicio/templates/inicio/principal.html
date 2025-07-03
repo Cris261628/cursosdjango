@@ -1,0 +1,11 @@
+{% extends "inicio/encabezado.html" %}
+
+{% block imagen %}
+    {% load static %}
+    {% static 'inicio/images/home.png' %}
+{% endblock %}
+{% block desc%}Inicio<span>saludos</span>{% endblock%}
+{% block contenido %}
+<title>{% block tilulo%}inicio{% endblock%}</title>
+                      <h1>HOLA este es un sitio con cursos </h1>
+{% endblock %}

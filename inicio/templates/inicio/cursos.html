@@ -1,0 +1,16 @@
+{% extends "inicio/encabezado.html" %}
+{% block imagen %}
+    {% load static %}
+    {% static 'inicio/images/form.png' %}
+{% endblock %}
+{% block desc%}cursos <span>todos los cursos disponibles</span>{% endblock%}
+{% block contenido %}
+<title>{% block tilulo %}cursos{% endblock %}</title>
+<h1>Cursos Disponibles</h1>
+<ul>
+    <li>Base de Datos</li>
+    <li>Programación</li>
+    <li>Redes</li>
+    <li>Seguridad Informática</li>
+</ul>
+{% endblock %}

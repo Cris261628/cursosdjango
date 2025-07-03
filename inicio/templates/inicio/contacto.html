@@ -1,0 +1,33 @@
+{% extends "inicio/encabezado.html" %}
+
+{% block title %}Contacto{% endblock %}
+{% block imagen %}
+    {% load static %}
+    {% static 'inicio/images/phone.png' %}
+{% endblock %}
+{% block desc%}contactenos <span>escriba su duda o pregunta acerca de nuestros cursos</span>{% endblock%}
+{% block contenido %}
+<title>{% block tilulo%}contacto{% endblock%}</title>
+<h1>Solicito su Información</h1>
+<form method="post">
+    {% load static %}
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <label for="correo">Correo electrónico:</label><br>
+    <input type="email" id="correo" name="correo" required><br><br>
+
+    <label for="curso">Curso de interés:</label><br>
+    <select id="curso" name="curso">
+        <option value="base_de_datos">Base de Datos</option>
+        <option value="programacion">Programación</option>
+        <option value="redes">Redes</option>
+        <option value="seguridad">Seguridad Informática</option>
+    </select><br><br>
+
+    <label for="comentarios">Comentarios:</label><br>
+    <textarea id="comentarios" name="comentarios"></textarea><br><br>
+
+    <button type="submit">Enviar</button>
+</form>
+{% endblock %}
