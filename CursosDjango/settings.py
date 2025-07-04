@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'inicio',
     'convocatorias.apps.ConvocatoriasConfig',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,19 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Format', 'Font', 'FontSize'],
+            ['TextColor', 'BGColor'],
+            ['Strike', 'Subscript', 'Superscript'],
+            ['EmojiPanel'],
+            ['Table', 'HorizontalRule'],
+            ['Undo', 'Redo'],
+            ['Source']
+        ]
+    }
+}
